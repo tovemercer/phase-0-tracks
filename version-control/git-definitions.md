@@ -3,7 +3,7 @@
 **Instructions: ** Define each of the following Git concepts.
 
 * What is version control?  Why is it useful?
-version control allows you to save your progress and allows you go go back to a save point if needed. it is useful if you are needing to 'go back in time' to a earlier version of your code.
+version control allows you to save your progress and allows you go go back to a save point if needed. it is useful if you are needing to 'go back in time' (like Michael J Fox) to a earlier version of your code.
 
 * What is a branch and why would you use one?
 a branch is a copy of the master that you can work on so so the master is left untouched in case an error is made. it allows you to work on code and be albe to go back to the original if needed.
