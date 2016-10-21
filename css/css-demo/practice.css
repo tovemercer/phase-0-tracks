@@ -7,3 +7,7 @@ section.job {
 	border-radius: 5px;
 	padding: 20px
 }
+
+ul.list {
+	font-size: .8em;
+}
