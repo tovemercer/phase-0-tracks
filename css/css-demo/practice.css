@@ -11,3 +11,7 @@ section.job {
 ul.list {
 	font-size: .8em;
 }
+
+ul li {
+	color: red;
+}
