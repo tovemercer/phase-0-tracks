@@ -20,11 +20,6 @@ cite {
   position: absolute;
 }
 
-#external-links ul {
-  list-style-type: none;
-  padding-left: 0px;
-}
-
 main {
   width: 80%;
   margin-left: 20%;
@@ -32,6 +27,12 @@ main {
   vertical-align: baseline;
   position: absolute; 
 }
+
+#external-links ul {
+  list-style-type: none;
+  padding-left: 0px;
+}
+
 /* you're welcome to edit the
 image, figure, and figcaption CSS if you'd like, 
 but it's optional! */
