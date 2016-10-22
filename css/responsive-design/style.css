@@ -1,5 +1,4 @@
 body {
-  max-width: 960px;
 }
 
 blockquote {
@@ -14,15 +13,16 @@ cite {
 }
 
 #external-links {
-  width: 200px;
+  width: 20%;
   display: inline;
   vertical-align: baseline;
-  position: absolute;
+  position: fixed;
 }
 
 main {
-  width: 756px;
-  margin-left: 200px;
+  width: 80%;
+  margin-left: 20%;
+  max-width: 960px;
   display: inline;
   vertical-align: baseline;
   position: absolute;
