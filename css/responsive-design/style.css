@@ -55,3 +55,40 @@ figcaption {
   font-style: italic;
   text-align: right;
 }
+
+@media screen and (max-width: 500px) {
+  main, p, blockquote, cite {
+    font-size: .9em;
+    width: 300px;
+  }
+ h1 {
+    font-size: 1.5em;
+    width: 300px;
+  }
+  figcaption {
+    font-size: .9em
+  }
+}
+
+@media screen and (max-width: 500px) {
+  body {
+    background-color: hotpink;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  body {
+    font-size: .9em;
+    width: 5px;
+  }
+  #external-links h1 {
+    font-size: 1em;
+    width: 5px;
+  }
+  #external-links ul {
+    font-size: .9em;
+    width: 5px;
+    position: absolute;
+    margin-top: 0px;
+  }
+}
