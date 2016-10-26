@@ -1,0 +1,23 @@
+-for your owner:
+	-ask what floor they would like to go to
+	-when a response is given
+		-move towards the door of the elevator (wall A), but do not 	through
+		-then move along wall A to the right of the door until another 	wall is reached (wall B)
+		-face wall A
+		-you will be facing multiple buttons with numbers on them
+		-raise your arm and select the button with the number your owner 	told you with a pointed finger
+
+
+Making toast
+
+-pick up bread from the counter
+	-remove the closure tie by twisting it in the opposit direction of the spiral until both ends seperate
+	-remove one slice of bread form the bag
+	-place the slice of bread into the farthest left opening of the toaster
+	-move hand along the top of the toaster towards the front
+	-move hand down until a lever is reached
+	-place hand on lever and gently push down until a click is heard
+-wait until lever and toast has popped up
+	-hover hand over the top of the toaster
+	-carfully pick up the slice of toast by the exposed area
+	-eat and enjoy!
