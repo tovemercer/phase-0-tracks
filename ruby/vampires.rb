@@ -7,7 +7,14 @@ age = gets.to_i
 puts "What year where you born?"
 birth_year = gets.to_i
 
+current_year = 2016
+birth_age = current_year - birth_year
 
+if birth_age == age
+	birth_age = true
+else
+	birth_age = false
+end
 
 puts "Do you like garlic bread? (y/n)"
 garlic_bread = gets.chomp
@@ -30,4 +37,10 @@ elsif insurance == "n"
 else
 	puts "Please put y or n"
 end
-	
+
+if birth_age && (garlic_bread || insurance)
+	puts "Probably not a vampire."
+else birth_age && (garlic_bread || insurance)
+	puts "Probably a vampire."
+end
+
