@@ -1,6 +1,12 @@
 puts "What is your name?"
 name = gets.chomp
 
+if name == "Drake Cula" "Tu Fang"
+	name = false
+else
+	name = true
+end
+
 puts "How old are you?"
 age = gets.to_i
 
@@ -38,9 +44,16 @@ else
 	puts "Please put y or n"
 end
 
-if birth_age && (garlic_bread || insurance)
+if name = false
+	puts "Definitely a vampire."
+ elsif birth_age && (garlic_bread || insurance)
 	puts "Probably not a vampire."
-else birth_age && (garlic_bread || insurance)
+elsif birth_age && (garlic_bread || insurance)
 	puts "Probably a vampire."
+elsif birth_age && garlic_bread && insurance
+	puts "Almost certainly a vampire."
+
+else
+	puts "Results inconclusive."
 end
 
