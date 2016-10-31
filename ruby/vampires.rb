@@ -49,10 +49,9 @@ until applicants == 0
 	puts "Please list any allergies you may have, one at a time. When finished (or if you don't have any) please type 'done'."
 	allergies = gets.chomp
 		if allergies == "sunshine"
-			puts "Probably a vampire."
+			allergies = true
 			ailment += 1
 		elsif allergies == "done"
-			puts "Thank you."
 			ailment += 1
 		end
 	end
@@ -63,13 +62,15 @@ until applicants == 0
 		puts "Definitely a vampire."
 	when birth_age == false && garlic_bread == false && insurance == false
 		puts "Almost certainly a vampire."
+	when birth_age == false && (garlic_bread == false || insurance == false), allergies == true
+		puts "Probably a vampire."
 	when birth_age == true && (garlic_bread == true || insurance == true)
 		puts "Probably not a vampire."
-	when birth_age == false && (garlic_bread == false || insurance == false)
-		puts "Probably a vampire."
 	else puts "Results inconclusive."
 	end
 
 applicants -= 1
 
 end
+
+puts "Actually, never mind! What do these questions have to do with anything? Let's all be friends."
