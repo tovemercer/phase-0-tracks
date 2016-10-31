@@ -1,8 +1,8 @@
 #Release 2 
-#1) Create an encrypt method
+#1) Create an encrypt method 
 
 puts "what is the word you'd like to encrypt?"
-user_input = gets.chomp
+user_input = gets.chomp 
 
 #define a method that takes string as its argument 
 def encrypt(user_input)
@@ -10,7 +10,7 @@ def encrypt(user_input)
 #iterate through the string 
     i = 0 
     while i < user_input.length
-	where_alphabet = alphabet.index(user_input[i])
+where_alphabet = alphabet.index(user_input[i])
 
 #change so that character after z is next character in the alphabet 
     if where_alphabet == 25
@@ -19,14 +19,15 @@ def encrypt(user_input)
         user_input[i]=alphabet[where_alphabet + 1]
         i +=1 
     end #while i 
-end #encrypt
+    user_input 
+end #encrypt 
 
 encrypt(user_input)
 puts (user_input)
 
 #2) Create a decrypt method 
 puts "what is the word you'd like to decrypt?"
-user_input2 = gets.chomp
+user_input2 = gets.chomp 
 
 #defining method that takes string as argument 
 def decrypt(user_input2)
@@ -40,40 +41,40 @@ def decrypt(user_input2)
         where_alphabet = alphabet.index(user_input2[i])
         user_input2[i]=alphabet[where_alphabet -1]
         i +=1
-    end #while
-end #method
+    end #while i 
+    user_input2
+end #method 
 
 decrypt(user_input2)
 puts user_input2
 
 #Release 3: Test your program
-#Our Driver Code
+#Our Driver Code 
 
 #ask the user for a password
 puts "enter your password"
-pass = gets.chomp
+pass = gets.chomp 
 
 #encrypt a few passwords
 first = "abc"
 puts encrypt(first) #should return "bcd" 
-puts first
+puts first 
 
 second = "zed"
 encrypt(second) #should return "afe"
-puts second
+puts second 
 
 third = "bcd" 
 decrypt(third) #should return "abc"
 puts third
 
 fourth = "afe"
-decrypt(fourth) #should return "zed"
-puts fourth
+decrypt (fourth)
+puts fourth #should return "zed"
+
 
 #Release 4: Try a nested method call
-seafood = "swordfish"
-decrypt(encrypt(seafood))
-print seafood
+print decrypt(encrypt("swordfish"))
 
 #Release 5: add an interface
 print "Would you like to encrypt or decrypt a password (e/d)" 
@@ -85,8 +86,8 @@ if choice == 'e'
     encrypt(password)
     puts password 
 elsif choice == 'd' 
-    decrypt(passowrd)
+    decrypt(password)
     puts password 
 else 
-    puts "Please enter 'd' for decrypt or 'e' for encrpyt."
-end
+    puts "Please enter 'd' for decrypt or 'e' for encrypt."
+end 
