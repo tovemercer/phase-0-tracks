@@ -44,6 +44,20 @@ until applicants == 0
 		puts "Please put y or n"
 	end
 	
+	ailment = 0
+	while ailment == 0
+	puts "Please list any allergies you may have, one at a time. When finished (or if you don't have any) please type 'done'."
+	allergies = gets.chomp
+		if allergies == "sunshine"
+			puts "Probably a vampire."
+			ailment += 1
+		elsif allergies == "done"
+			puts "Thank you."
+			ailment += 1
+		end
+	end
+	
+			
 	case
 	when name == "Drake Cula", name == "Tu Fang"
 		puts "Definitely a vampire."
