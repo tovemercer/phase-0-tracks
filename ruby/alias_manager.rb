@@ -9,42 +9,11 @@ puts "What is your first and last name?"
 real_name = gets.chomp
 
 name_reorder = real_name.downcase.split('')
-#shuffle_name = name_reorder.shuffle
-#p shuffle_name.join
-#shuffle_name.class
 agent_name = name_reorder.map! {|x| x + "a"}
-p agent_name.join
-#new_alais = agent_name
-#puts new_alais
+alias_name = agent_name.join.inspect
+p alias_name
 
-
-
-
-
-def change_letters(name)
-	letters = "abcdefghijklmnopqrstuvwxyz".split("")
-	#letters = ["a", "e", "i", "o", "u"]
-	#next_letter = []
-	
-	letters.map! do |letters|
-		letters.next
-	end
-#p letters
-end
-
-#p letters
-
-puts "What is your first and last name? Or type 'exit' to leave the program."
-real_name = gets.chomp
-
-loop do
-	if real_name == "exit"
-		break
-	elsif real_name == ""
-		puts "Invalid entry. Please enter your first and last name or type 'exit' to leave the program."
-	else
-		p change_letters(real_name).join
-	end
-end
-
-		
+##struggled big time with this challenge and spent too much time messing around with it.
+##i should have time-boxed myself, but I was wanted to figure t out.
+##definitly didn't think it would be this much of a challenge
+##I plan on reviewing this information monday and tuesday
