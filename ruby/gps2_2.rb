@@ -17,9 +17,10 @@ def create_list(items)
     add_item(grocery_list, item_name)
 #    grocery_list[item_name] = quantity
   end
-  p grocery_list
+return grocery_list
 end
 
+#driver code:
 #create_list("apples bananas oranges")
 
 
@@ -35,32 +36,32 @@ def add_item(grocery_list, item_name, quantity = 1)
   return grocery_list
 end
 
-grocery_list = create_list("apples bananas oranges")
-add_item(grocery_list, "grapes", 14)
-add_item(grocery_list, "cookies")
-puts grocery_list
+#driver code:
+#grocery_list = create_list("apples bananas oranges")
+#add_item(grocery_list, "grapes", 14)
+#add_item(grocery_list, "cookies")
+#puts grocery_list
 
 # Method to remove an item from the list
-# input: list, item, optional_quantity
+# input: list, item, optional_quantity ###removed quantity from input
 # steps:
   # if existing quantity is greater than optional_quantity
   # update item quantity by -optional_quantity
+###I decided to remove this step. 
+###If the user wants to update the quantity of an item the update item block should be ran. 
+###This method is purly for removing an item regaurdless of quantity.
   # if existing quantity is optional_quantity
   # remove the item
 # output: list
 
-def remove_item(grocery_list, item_name, quantity)
-  if quantity > 1 #<==================
-    quantity -= 1 #<==================
-  else quantity = 1
+def remove_item(grocery_list, item_name)
     grocery_list.delete(item_name)
-  end
   return grocery_list
 end
 
-remove_item(grocery_list, "oranges", 1)
-remove_item(grocery_list, "grapes", 4) #<=================
-puts grocery_list
+#driver code:
+#remove_item(grocery_list, "oranges")
+#puts grocery_list
     
 
 # Method to update the quantity of an item
@@ -70,11 +71,13 @@ puts grocery_list
 # output: list
 
 def update_item(grocery_list, item_name, quantity)
-  grocery_list[:item_name] => quantity #<=============
+  grocery_list[item_name] = quantity
+  return grocery_list
 end
 
-update_item(grocery_list, "grapes", 4)
-puts grocery_list
+#driver code:
+#update_item(grocery_list, "grapes", 4)
+#puts grocery_list
 
 # Method to print a list and make it look pretty
 # input: list
@@ -85,7 +88,17 @@ puts grocery_list
 
 def print_list(grocery_list)
   grocery_list.each do |item_name, quantity|
-    puts "#{quantity} #{item_name}(s)"
+    puts "#{quantity} #{item_name}"
   end
   return grocery_list
 end
+
+
+grocery_list = create_list(" ")
+add_item(grocery_list, "Lemonade", 2)
+add_item(grocery_list, "Tomatoes", 3)
+add_item(grocery_list, "Onion")
+add_item(grocery_list, "Ice Cream", 4)
+remove_item(grocery_list, "Lemonade")
+update_item(grocery_list, "Ice Cream", 1)
+puts print_list(grocery_list)
