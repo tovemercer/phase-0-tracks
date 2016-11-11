@@ -48,7 +48,7 @@ end
   # if existing quantity is greater than optional_quantity
   # update item quantity by -optional_quantity
 ###I decided to remove this step. 
-###If the user wants to update the quantity of an item the update item block should be ran. 
+###If the user wants to update the quantity of an item the update item method should be ran. 
 ###This method is purly for removing an item regaurdless of quantity.
   # if existing quantity is optional_quantity
   # remove the item
@@ -102,3 +102,23 @@ add_item(grocery_list, "Ice Cream", 4)
 remove_item(grocery_list, "Lemonade")
 update_item(grocery_list, "Ice Cream", 1)
 puts print_list(grocery_list)
+
+#What did you learn about pseudocode from working on this challenge?
+#having the outline was really helpful. it provided direction, i usually feel pretty lost when trying to pseudocode.
+#i plan on using a simular format when pseudocoding; what i was doing looked nothing like that!
+
+#What are the tradeoffs of using arrays and hashes for this challenge?
+#using a hash for this challenge seemed like the best option since we needed to include quantities.
+#with an array we could have created a list but not quantities. it's much cleaner looking and more thoughful to have the quantites in there.
+
+#What does a method return?
+#a method will return nil unless you include 'return' in your code.
+
+#What kind of things can you pass into methods as arguments?
+#required arguments, arguments with default values, optional arguments
+
+#How can you pass information between methods?
+#through hashes and arrays.
+
+#What concepts were solidified in this challenge, and what concepts are still confusing?
+#definitly feeling more comfortable with hashes, methods and pseudocoding. still a little fuzzy on itteration and blocks.
