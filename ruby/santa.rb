@@ -13,6 +13,7 @@ class Santa
 
 	def speak
 		puts "Ho, ho, ho! Haaaappy holidays!"
+		puts "From the #{@ethnicity} #{@gender}!"
 	end
 	
 	def eat_milk_and_cookies(cookie_type)
@@ -20,6 +21,7 @@ class Santa
 		return cookie_type
 	end
 
+#setter methods:
 	def celebrate_birthday
 		@age =+ 1
 		puts "You are now #{@age}!"
@@ -29,6 +31,20 @@ class Santa
 		puts "Bad #{reindeer}!!!"
 		@reindeer_ranking.delete(reindeer)
 		@reindeer_ranking << reindeer
+	end
+
+	def gender=(updated_gender)
+		@gender = updated_gender
+		puts "I am now #{@gender}."
+	end
+
+#getter methods:
+	def age
+		@age
+	end
+
+	def ethnicity
+		@ethnicity
 	end
 
 #	def santa_profile
@@ -45,6 +61,8 @@ santa_mayhem.speak
 santa_mayhem.eat_milk_and_cookies("chocolate chip cookie")
 santa_mayhem.celebrate_birthday
 santa_mayhem.get_mad_at("Vixen")
+santa_mayhem.gender = "fluid"
+puts "Our #{santa_mayhem.ethnicity} reindeer is #{santa_mayhem.age}."
 #santa_mayhem.santa_profile
 
 santas = []
