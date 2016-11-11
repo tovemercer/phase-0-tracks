@@ -1,7 +1,6 @@
 class Santa
-end
-
-class Santa
+attr_reader :age, :ethnicity
+attr_accessor :gender
 
 	def initialize(gender, ethnicity)
 		p "Initializing Santa instance ..."
@@ -21,53 +20,56 @@ class Santa
 		return cookie_type
 	end
 
-#setter methods:
 	def celebrate_birthday
 		@age =+ 1
-		puts "You are now #{@age}!"
 	end
 
 	def get_mad_at(reindeer)
-		puts "Bad #{reindeer}!!!"
 		@reindeer_ranking.delete(reindeer)
 		@reindeer_ranking << reindeer
 	end
 
-	def gender=(updated_gender)
-		@gender = updated_gender
-		puts "I am now #{@gender}."
-	end
+##setter method:
+#	def gender=(updated_gender)
+#		@gender = updated_gender
+#	end
 
-#getter methods:
-	def age
-		@age
-	end
-
-	def ethnicity
-		@ethnicity
-	end
-
-#	def santa_profile
-#		puts "Gender: #{@gender}"
-#		puts "Ethnicity: #{@ethnicity}"
-#		puts "Reindeer Ranking: #{@reindeer_ranking}"
-#		puts "Age: #{@age}"
+##getter methods:
+#	def age
+#		@age
+#	end
+#
+#	def ethnicity
+#		@ethnicity
 #	end
 
 end
 
-santa_mayhem = Santa.new("female", "hispanic")
-santa_mayhem.speak
-santa_mayhem.eat_milk_and_cookies("chocolate chip cookie")
-santa_mayhem.celebrate_birthday
-santa_mayhem.get_mad_at("Vixen")
-santa_mayhem.gender = "fluid"
-puts "Our #{santa_mayhem.ethnicity} reindeer is #{santa_mayhem.age}."
-#santa_mayhem.santa_profile
+##Driver Code:
+#santa_mayhem = Santa.new("female", "hispanic")
+#santa_mayhem.speak
+#santa_mayhem.eat_milk_and_cookies("chocolate chip cookie")
+#santa_mayhem.celebrate_birthday
+#santa_mayhem.get_mad_at("Vixen")
+#santa_mayhem.gender = "fluid"
+#puts "You are now #{santa_mayhem.age}!"
+#puts "I am now #{santa_mayhem.gender}."
+#puts "Our #{santa_mayhem.ethnicity} reindeer is #{santa_mayhem.age}."
 
-santas = []
-example_genders = ["agender", "female", "bigender", "male", "female", "gender fluid", "N/A"]
-example_ethnicities = ["black", "Latino", "white", "Japanese-African", "prefer not to say", "Mystical Creature (unicorn)", "N/A"]
-example_genders.length.times do |i|
-  santas << Santa.new(example_genders[i], example_ethnicities[i])
+def lot_o_santas(number)
+	santas = []
+	santa_genders = ["agender", "female", "bigender", "male", "female", "gender fluid", "N/A"]
+	santa_ethnicities = ["black", "Latino", "white", "Japanese-African", "prefer not to say", "Mystical Creature (unicorn)", "N/A"]
+	santa_genders.length.times do |i|
+	  santas << Santa.new(santa_genders[i], santa_ethnicities[i], rand(0..140))
+	end
+end
+
+santas = lot_o_santas(10)
+
+santas.each do |itm, idx|
+	puts "Gender: #{itm.gender}"
+	puts "Ethnicity: #{itm.ethnicity}"
+	puts "Ranking: #{idx}"
+	puts "Age: #{itm.age}"
 end
