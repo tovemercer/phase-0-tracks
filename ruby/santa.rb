@@ -3,6 +3,10 @@ end
 
 class Santa
 
+def initialize()
+	p "Initializing Santa instance ..."
+end
+
 def speak
 	puts "Ho, ho, ho! Haaaappy holidays!"
 end
