@@ -11,26 +11,26 @@
 #guess count
 #game over
 #
-#method to store word_input (hash?)
+#method to store word_input (array)
 #input: word_input (string)
-#steps: define the hash
+#steps: define the array
 #	split word_input into letters
-#	stores split word_input to hash
+#	stores split word_input to array
 #	index letters so it is know how many guesses user_2 has —iterate?
-#output: hash
+#output: array
 #	 guesses_remaining module
 #
-#method to store letter_guess (hash?)
+#method to store letter_guess (array)
 #input: word_input, lletter_guess
-#steps: define hash
-#	stores letter_guess to hash
+#steps: define array
+#	stores letter_guess to array
 #output:
 #
 #guesses_remaining module to tell user_2 how many guess left
 #
 #method to compare word_input and letter_guess
-#input: word_input (hash), letter
-#steps: letter_guess (hash) iterates through word_input (hash)
+#input: word_input (array), letter
+#steps: letter_guess (array) iterates through word_input (array)
 #	-if match
 #		-successful match 
 #		-requests new letter
@@ -41,14 +41,14 @@
 #output: guesses_remaining module
 #
 #method to successful match letter_guess to word_input
-#input: word_input (hash), letter
-#steps: letter iterates through word_input (hash)
+#input: word_input (array), letter
+#steps: letter iterates through word_input (array)
 #	-either matches
 #output: guesses_remaining module
 #
 #method to unsuccessful match letter to word_input
-#input: word_input (hash), letter
-#steps: letter iterates through word_input (hash)
+#input: word_input (array), letter
+#steps: letter iterates through word_input (array)
 #	-no match
 #output: guesses_remaining module
 #
