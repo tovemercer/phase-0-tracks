@@ -5,8 +5,15 @@
 //join the characters back together
 //reversed word (olleh)
 
-var str = "Hello"
+//var str = "Hello"
+//
+//for (var i = str.length; i >= 0; i-=1) {
+//	console.log(str[i]);
+//}
 
-for (var i = str.length; i >= 0; i-=1) {
-	console.log(str[i]);
+
+function word_reverse(str) {
+	console.log(str);
 }
+
+word_reverse("Hello");
