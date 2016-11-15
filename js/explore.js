@@ -12,8 +12,16 @@
 //}
 
 
-function word_reverse(str) {
-	console.log(str);
+//function reverse(str) {
+//	console.log(str);
+//}
+//
+//reverse("Hello");
+
+
+function reverse(str) {
+	for (var i = str.length; i >= 0; i-=1)
+	console.log(str[i]);
 }
 
-word_reverse("Hello");
+reverse("Hello");
