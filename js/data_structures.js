@@ -30,7 +30,7 @@ for (var key in my_car) {
 	console.log("key " + key + "...." + "value " + my_car[key])
 }
 
-//requirements a literal object
+//to meet requirements- a literal object
 
 var seasons = {
 	summer: 'hot',
