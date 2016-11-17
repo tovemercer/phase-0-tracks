@@ -25,3 +25,18 @@ my_car = new Car("honda", "prelude", 2000)
 
 console.log(my_car)
 my_car.beep()
+
+for (var key in my_car) {
+	console.log("key " + key + "...." + "value " + my_car[key])
+}
+
+//requirements a literal object
+
+var seasons = {
+	summer: 'hot',
+	fall: 'cool',
+	winter: 'cold',
+	spring: 'warm',
+}
+
+console.log(seasons)
