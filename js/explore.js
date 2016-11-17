@@ -1,27 +1,20 @@
-//declare a string (hello)
+//create a function to pass in a string (hello)
 //create loop to break apart the characters of the string
-//index the characters
-//use zero indexing to reverse the order
+//reverse the order
 //join the characters back together
 //reversed word (olleh)
 
-//var str = "Hello"
-//
-//for (var i = str.length; i >= 0; i-=1) {
-//	console.log(str[i]);
-//}
-
-
-//function reverse(str) {
-//	console.log(str);
-//}
-//
-//reverse("Hello");
-
-
 function reverse(str) {
-	for (var i = str.length; i >= 0; i-=1)
-	console.log(str[i]);
+	var result = "";
+	for (var i = str.length - 1; i >= 0; i--) {
+		result += str[i];
+	}
+//	console.log(result);
+	return result
 }
 
-reverse("Hello");
+var driver = reverse("hello");
+
+if (1 == 1) {
+	console.log(driver)
+}
