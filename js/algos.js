@@ -45,7 +45,7 @@ console.log(key_value({name: "Tammy", age: 20} , {name: "Tammy", age: 18}));
 
 //RELEASE 2
 
-//takes an integer for a length
+//function that takes an integer for a length
 //builds and returns an aray of strings of the given length
 //	argument of 3 is entered, returns a random array of 3 words
 //	returned words should be a varying length (min 1, max 10)
@@ -54,5 +54,29 @@ console.log(key_value({name: "Tammy", age: 20} , {name: "Tammy", age: 18}));
 //	prints array
 //	feeds array into 'longest word' function
 //	prints result
+
+var random_word = function(number) {
+	var word = "";
+	var possible = "abcdefghijklmnopqrstuvwxyz";
+	for (var i = 0; i < number; i++) {
+		word += possible.charAt(Math.floor(Math.random() * possible.length));
+	}
+	return word;
+}
+
+//console.log(random_word(5))
+
+const times = n=> f=> {
+  let iter = i=> {
+    if (i === n) return
+    f (i)
+    iter (i + 1)
+  }
+  return iter (0)
+}
+
+times (10) (i=> console.log(random_word(3)))
+
+
 
 
