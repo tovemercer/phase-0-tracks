@@ -18,6 +18,7 @@ words.sort(function(a, b) {
 console.log(words)
 
 
+
 //RELEASE 1
 
 //function that takes 2 objects(hashes)
@@ -43,4 +44,15 @@ console.log(key_value({name: "Bob", age: 20} , {name: "Tammy" , age: 18}));
 console.log(key_value({name: "Tammy", age: 20} , {name: "Tammy", age: 18}));
 
 //RELEASE 2
+
+//takes an integer for a length
+//builds and returns an aray of strings of the given length
+//	argument of 3 is entered, returns a random array of 3 words
+//	returned words should be a varying length (min 1, max 10)
+//driver code to test 10 times
+//	generates array
+//	prints array
+//	feeds array into 'longest word' function
+//	prints result
+
 
