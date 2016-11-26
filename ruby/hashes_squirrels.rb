@@ -1,6 +1,6 @@
 #create empty hash
 #prompts user for client's information
-puts "Welcome to the client database."
+puts "Welcome to the Client Database."
 client_info = {}
 
 # => name(string)
@@ -65,13 +65,23 @@ if update == "y"
 	end
 
 # => if user enters 'none' skip to:
-elsif update == "none"
-	puts "Exiting program."
+elsif update == "n"
+	puts "Exiting update."
 else
 	puts "I didn't undersand you. Please try again."
 end
 
-
-
 #print the lastest version of the client's info
+puts
+puts "CLIENT INFORMATION:"
+puts "Name: " + client_info[:name].capitalize
+puts "Age: " + client_info[:age].to_s
+puts "Number of children in household: " + client_info[:children].to_s
+puts "Prefered decor theme: " + client_info[:theme].capitalize
+puts "Household pets? " + client_info[:pets].to_s
+
 #exit program
+puts
+puts "Thank you for using the Client Database!"
+
+
