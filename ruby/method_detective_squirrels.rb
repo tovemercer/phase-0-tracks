@@ -19,20 +19,21 @@
 "the usual".concat(" suspects")
 #=> "the usual suspects"
 
-"suspects"
+"suspects".prepend("the usual ")
 # => "the usual suspects"
 
-"The case of the disappearing last letter"
+"The case of the disappearing last letter".chop
 # => "The case of the disappearing last lette"
 
-"The mystery of the missing first letter"
-
+a = "The mystery of the missing first letter"
+a.slice!(0)
+p a
 # => "he mystery of the missing first letter"
 
-"Elementary,    my   dear        Watson!"
+"Elementary,    my   dear        Watson!".squeeze
 # => "Elementary, my dear Watson!"
 
-"z"
+"z".ord
 # => 122 
 # (What is the significance of the number 122 in relation to the character z?)
 # It's the number given to the lowercase "z" in the ASCII.
