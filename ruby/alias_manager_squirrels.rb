@@ -56,7 +56,28 @@ new_name = []
 new_name.join
 end
 
-p alias_generator("Felicia Torres") # => "Vussit Gimodoe"
+#p alias_generator("Felicia Torres") # => "Vussit Gimodoe"
 
+agent_alias = Hash.new
 
+# User Interface
+input = false
+
+while input == false
+puts "Please enter your first and last name to receive an alias. (enter 'quit' when done)" 
+real_name = gets.chomp.downcase
+
+	if real_name == "quit"
+		input = true
+	elsif real_name == ""
+		puts "Invaild response."
+	else
+		puts alias_generator(real_name)
+		agent_alias[real_name] = alias_generator(real_name)
+		puts "Enter another name or type 'quit' to exit."
+		real_name = gets.chomp.downcase
+	end
+end
+
+agent_alias.each { |real_name, secret_alias| puts "#{real_name}'s alias is #{secret_alias}"}
 
