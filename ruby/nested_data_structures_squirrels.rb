@@ -42,3 +42,9 @@ music = {
 			"What a Fool Believes"]
 	}
 }
+
+puts music[:alternative][:songs]
+puts
+puts music[:eighties][:bands][2]
+puts
+puts music[:indie][:songs].push("A-Punk")
