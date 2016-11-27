@@ -8,21 +8,30 @@
 #join the characters back together
 #join the words back together
 
-def next_vowel(letters)
+def next_vowel(vowel)
 	i = 0
 	vowels = "aeiou"
-		while i < letters.length
-			ltr = vowels.index(letters[i])
+		while i < vowel.length
+			ltr = vowels.index(vowel[i])
 			ltr += 1
-			letters[i] = vowels[ltr]
+			 vowel[i] = vowels[ltr]
 			i += 1
 		end
-   return letters
+   return vowel
 end
 
 
-#def next_consonant
-#
-#end
+def next_consonant(consonant)
+	i = 0
+	consonants = "bcdfghjklmnpqrstvwxyz"
+		while i < consonant.length
+			ltr = consonant.index(consonant[i])
+			ltr += 1
+			consonant[i] = consonants[i]
+			i += 1
+		end
+	return consonant
+end
 
 next_vowel('a')
+next_consonant('b')
