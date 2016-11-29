@@ -67,7 +67,18 @@ kitty.play('feather')
 kitty.sleep(5)
 kitty.speak(8)
 
+cat_array = []
 
+50.times do 
+	cat_array << Cat.new
+end
 
+p cat_array
+
+cat_array.each do |kittens|
+	kittens.play("bird toy")
+	kittens.sleep(3)
+	kittens.speak(6)
+end
 
 
