@@ -71,3 +71,30 @@ add_item(shopping_list, "Ice Cream", 4)
 delete_item(shopping_list, "Lemonade")
 update_item(shopping_list, "Ice Cream", 1)
 print_list(shopping_list)
+
+=begin
+
+What did you learn about pseudocode from working on this challenge?
+it's really helpful having an outline to refer to when the problem seems overwhelming
+
+What are the tradeoffs of using arrays and hashes for this challenge?
+using a hash made more sense since we included the quantities for each item.
+with an array we would have just been able to create the lsit. it's much cleaner
+with the hash as well as better organized.
+
+What does a method return?
+the last line of code written in the method. including 'return' lets you choose
+what is returned
+
+What kind of things can you pass into methods as arguments?
+required arguments, arguments with default values, optional arguments
+
+How can you pass information between methods?
+with hashs and array (still trying to wrapmy head around this one!)
+
+What concepts were solidified in this challenge, and what concepts are still confusing?
+i feel more confident with hashes, pseudocoding and iterating. 
+i am still trying to understand working with multiple methods and how to link
+those together with hashes and arrays.
+
+=end
