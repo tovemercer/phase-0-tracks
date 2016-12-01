@@ -2,12 +2,12 @@ class Santa
 	attr_reader :age, :ethnicity
 	attr_accessor :gender
 
-	def initialize(gender, ethnicity)
+	def initialize(gender, ethnicity, age)
 		puts "Initializing Santa instance ..."
 		@gender = gender
 		@ethnicity = ethnicity
 		@reindeer_ranking = ["Rudolph", "Dasher", "Dancer", "Prancer", "Vixen", "Comet", "Cupid", "Donner", "Blitzen"]
-		@age = 0
+		@age = age
 	end
 	
 	def speak
@@ -28,6 +28,8 @@ class Santa
 		@reindeer_ranking << name
 	end
 
+end
+
 #	#setter method
 #	def gender=(updated_gender)
 #		@gender = updated_gender
@@ -46,28 +48,35 @@ class Santa
 #		@gender
 #	end
 
-end
-
-santas = Santa.new("female", "african-american")
+#santas = Santa.new("female", "african-american")
 #santas.speak
 #santas.eat_milk_and_cookies('chocolate chip')
-santas.celebrate_birthday
-santas.get_mad_at("Vixen")
-santas.gender = "bigender"
-puts "A santa has updated thier gender to #{santas.gender}."
-puts "This santa is an #{santas.age} year old #{santas.ethnicity}."
+#santas.celebrate_birthday
+#santas.get_mad_at("Vixen")
+#santas.gender = "bigender"
+#puts "A santa has updated thier gender to #{santas.gender}."
+#puts "This santa is an #{santas.age} year old #{santas.ethnicity}."
 
-##santas = []
-##genders = ["Male", "Female", "Bigender", "Gender Fulid", "Agender", "Female"]
-##ethnicities = ["Black", "Hispanic", "White", "Japanese-African", "prefer not to say", "Mystical Creature (unicorn)"]
-##
-##genders.length.times do |i|
-##  santas << Santa.new(genders[i], ethnicities[i])
-##  puts "#{santas.length} santas have been added."
-##  puts
-##end
-##
-##santas.each do |santa|
-##	santa.speak
-##	santa.eat_milk_and_cookies("peanut butter")
-##end
+santas = []
+genders = ["Male", "Female", "Bigender", "Gender Fulid", "Agender", "Female"]
+ethnicities = ["Black", "Hispanic", "White", "Japanese-African", "prefer not to say", "Mystical Creature (unicorn)"]
+
+50.times do
+	santas = Santa.new(genders[rand(0..5)], ethnicities[rand(0..5)], rand(0..140))
+	puts "Santa's Profile:"
+	puts "Gender: #{santas.gender}"
+	puts "Ethnicity: #{santas.ethnicity}"
+	puts "Age: #{santas.age}"
+	puts
+end
+
+#genders.length.times do |i|
+#  santas << Santa.new(genders[i], ethnicities[i])
+#  puts "#{santas.length} santas have been added."
+#  puts
+#end
+#
+#santas.each do |santa|
+#	santa.speak
+#	santa.eat_milk_and_cookies("peanut butter")
+#end
