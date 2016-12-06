@@ -117,5 +117,4 @@ What concept did you most solidify in this challenge?
 i'm getting more comfortable with instance variables and seeing how much they can do.
 still a little confused on when they would need to be attr_reader or attr_accessor.
 
-
-
+=end
