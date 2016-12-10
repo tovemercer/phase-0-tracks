@@ -13,3 +13,37 @@ function reverse(str) {
 }
 
 console.log(reverse("hello"))
+
+
+var good_day = true;
+var eating_cake = true;
+
+if (good_day && eating_cake) {
+  console.log(reverse("!renniw"));
+} else if (good_day && !eating_cake) {
+  console.log(reverse("ybbahs oot ton"))
+} else {
+  console.log(reverse("deb ot kcab og tsuj"))
+}
+
+var good_day = true;
+var eating_cake = false;
+
+if (good_day && eating_cake) {
+  console.log(reverse("!renniw"));
+} else if (good_day && !eating_cake) {
+  console.log(reverse("ybbahs oot ton"))
+} else {
+  console.log(reverse("deb ot kcab og tsuj"))
+}
+
+var good_day = false;
+var eating_cake = false;
+
+if (good_day && eating_cake) {
+  console.log(reverse("!renniw"));
+} else if (good_day && !eating_cake) {
+  console.log(reverse("ybbahs oot ton"))
+} else {
+  console.log(reverse("deb ot kcab og tsuj"))
+}
