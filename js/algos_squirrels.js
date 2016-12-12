@@ -37,3 +37,40 @@ return match
 
 console.log(keyValue({name: "Steven", age: 54} , {name: "Tamir" , age: 54}));
 console.log(keyValue({name: "Steven", age: 45} , {name: "Tamir", age: 54}));
+
+
+//RELEASE 2
+
+//function that takes an integer for a length
+//builds and returns an array of strings of the given length
+//  argument of 3 is entered, returns a random array of 3 words
+//  returned words should be a varying length (min 1, max 10)
+//driver code to test 10 times
+//  generates array
+//  prints array
+//  feeds array into 'longest word' function
+//  prints result
+
+var random_word = function(number) {
+  var word = "";
+  var possible = "abcdefghijklmnopqrstuvwxyz";
+  for (var i = 0; i < number; i++) {
+    word += possible.charAt(Math.floor(Math.random() * possible.length));
+  }
+  return word;
+}
+
+//console.log(random_word(5))
+
+const times = n=> f=> {
+  let iter = i=> {
+    if (i === n) return
+    f (i)
+    iter (i + 1)
+  }
+  return iter (0)
+}
+
+times (10) (i=> console.log(random_word(3)))
+
+
