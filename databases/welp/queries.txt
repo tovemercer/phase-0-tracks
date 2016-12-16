@@ -24,3 +24,6 @@ sqlite> SELECT b.First_name, b.last_name, a.name, c.stars, c.comment
    ...> WHERE a.id=1;
 Angela|Jolie|Grundy Hollow Wedding Chapel|3|good food
 Braford|Putt|Grundy Hollow Wedding Chapel|1|hair in food
+
+
+*worked with Andrew McCrink
