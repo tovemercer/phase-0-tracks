@@ -1,0 +1,26 @@
+You've joined two tables before. How do you join three?
+There are some repetitive columns if we choose to view all fields. Choose instead to just view the user's names, the business name, the star rating, and the comment.
+
+sqlite> SELECT b.First_name, b.last_name, a.name, c.stars, c.comment
+   ...> FROM business a
+   ...> INNER JOIN reviews c
+   ...> ON a.id=c.business_id
+   ...> INNER JOIN users b
+   ...> ON b.id=c.users_id;
+Mandy|King|Amir's Towing|5|fast service
+Angela|Jolie|Grundy Hollow Wedding Chapel|3|good food
+Braford|Putt|Grundy Hollow Wedding Chapel|1|hair in food
+sqlite> ER JOIN reviews c
+
+
+How do you view the data of all three tables for just one particular business? 
+
+sqlite> SELECT b.First_name, b.last_name, a.name, c.stars, c.comment
+   ...> FROM business a
+   ...> INNER JOIN reviews c
+   ...> ON a.id=c.business_id
+   ...> INNER JOIN users b
+   ...> ON b.id=c.users_id
+   ...> WHERE a.id=1;
+Angela|Jolie|Grundy Hollow Wedding Chapel|3|good food
+Braford|Putt|Grundy Hollow Wedding Chapel|1|hair in food
