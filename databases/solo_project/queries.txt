@@ -1,0 +1,96 @@
+RELEASE 2
+
+1. Display the information in one table (either table is fine).
+
+sqlite> SELECT * FROM inventory;
+1|Vintage Casual Dress|false|12|1
+2|Disco Shirt|true|4|2
+3|Vintage Tee|false|6|2
+4|Levi's 501|false|15|1
+5|Faux Fur Coat|true|18|2
+
+sqlite> SELECT * FROM store;
+1|Kilo Vintage
+2|Kilo Vintage on ETSY
+
+
+2. Update an item that meets some condition (you can choose a condition that makes sense).
+
+sqlite> UPDATE inventory SET repairs_needed="false" WHERE item_description="Faux Fur Coat";
+sqlite> SELECT * FROM inventory;                                                
+1|Vintage Casual Dress|false|12|1
+2|Disco Shirt|true|4|2
+3|Vintage Tee|false|6|2
+4|Levi's 501|false|15|1
+5|Faux Fur Coat|false|18|2
+
+
+3. Display the information in both tables using one query.
+
+sqlite> SELECT inventory.item_description, inventory.repairs_needed, inventory.purchase_price, store.store_name
+   ...> FROM inventory
+   ...> INNER JOIN store
+   ...> ON inventory.store_id=store.id;
+Vintage Casual Dress|false|12|Kilo Vintage
+Disco Shirt|true|4|Kilo Vintage on ETSY
+Vintage Tee|false|6|Kilo Vintage on ETSY
+Levi's 501|false|15|Kilo Vintage
+Faux Fur Coat|false|18|Kilo Vintage on ETSY
+
+
+4. Display a narrower selection of columns (fewer columns than all of them, in other words) from both tables using one query.
+
+sqlite> SELECT inventory.item_description, store.store_name
+   ...> FROM inventory
+   ...> INNER JOIN store
+   ...> ON inventory.store_id=store.id;
+Vintage Casual Dress|Kilo Vintage
+Disco Shirt|Kilo Vintage on ETSY
+Vintage Tee|Kilo Vintage on ETSY
+Levi's 501|Kilo Vintage
+Faux Fur Coat|Kilo Vintage on ETSY
+
+
+5. Delete an item that meets some condition (you can choose a condition that makes sense).
+
+sqlite> DELETE FROM inventory WHERE item_description="Vintage Tee";
+sqlite> SELECT * FROM inventory
+   ...> ;
+1|Vintage Casual Dress|false|12|1
+2|Disco Shirt|true|4|2
+4|Levi's 501|false|15|1
+5|Faux Fur Coat|false|18|2
+
+
+RELEASE 3
+
+a conditional inner join…
+
+sqlite> SELECT inventory.item_description, inventory.repairs_needed, inventory.purchase_price, store.store_name
+   ...> FROM inventory                                                             
+   ...> INNER JOIN store
+   ...> ON inventory.store_id=store.id
+   ...> WHERE store.store_name="Kilo Vintage";
+Vintage Casual Dress|false|12|Kilo Vintage
+Levi's 501|false|15|Kilo Vintage
+
+
+left join…
+
+sqlite> SELECT inventory.item_description, store.store_name
+   ...> FROM inventory
+   ...> LEFT JOIN store
+   ...> ON inventory.store_id=store.id;
+Vintage Casual Dress|Kilo Vintage
+Disco Shirt|Kilo Vintage on ETSY
+Levi's 501|Kilo Vintage
+Faux Fur Coat|Kilo Vintage on ETSY
+
+
+right join (not supported)
+
+sqlite> SELECT inventory.repairs_needed, store.store_name
+   ...> FROM inventory
+   ...> RIGHT JOIN store
+   ...> ON inventory.store_id=store.id;
+Error: RIGHT and FULL OUTER JOINs are not currently supported
