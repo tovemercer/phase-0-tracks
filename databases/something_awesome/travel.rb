@@ -16,14 +16,16 @@ SQL
 todo_list_table = <<-SQL
   CREATE TABLE IF NOT EXISTS todo_list(
     id INTEGER PRIMARY KEY,
-    todo_items VARCHAR(255)
+    todo_items VARCHAR(255),
+    trip_id INT
   )
 SQL
 
 packing_list_table = <<-SQL
   CREATE TABLE IF NOT EXISTS packing_list(
     id INTEGER PRIMARY KEY,
-    item_description VARCHAR(255)
+    item_description VARCHAR(255),
+    trip_id INT
   )
 SQL
 
@@ -143,4 +145,4 @@ packing_arr = []
   end
 
 # Exit message
-puts "Awesome! We've got all the information you entered stored."
+puts "\nAwesome! We've got all the information you entered entered."
