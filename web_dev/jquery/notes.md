@@ -1,4 +1,4 @@
-Release 0
+Release 0 & 1
 
 Gain a high-level understanding what jQuery is and what it can do
 before -> having a historical understanding of the programs lets me see the big picture of what it can do (wikipedia).
