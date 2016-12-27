@@ -6,12 +6,16 @@
 <body>
   <h1 id="title">Hello (Dev) World</h1>
 
-  <h2 id="first_entry">Getting Excited</h2>
-  <p>We go onsite in less than a week! Nervous, but mainly excited to see what's in store.</p>
+  <div class="part1">
+    <h2 id="first_entry">Getting Excited</h2>
+    <p>We go onsite in less than a week! Nervous, but mainly excited  to see what's in store.</p>
+  </div>
 
-  <h2 id="second_entry">So Close...</h2>
-  <p>Coming back to HTML and CSS is freaking me out a little... it's been so long since we've worked with this!</p>
-  <p>But I did forget how much fun it was :)</p>
+  <div class="part2">
+    <h2 id="second_entry">So Close...</h2>
+    <p>Coming back to HTML and CSS is freaking me out a little...  it's been so long since we've worked with this!</p>
+    <p>But I did forget how much fun it was :)</p>
+  </div>
 
   <h3>Going onsite todo list</h3>
   <ul id="todo_list">
@@ -25,6 +29,8 @@
 
   <h5 id="sign_off">Thanks for visiting!</h5>
 
+
+
 <script type="jquery/script.js"></script>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
@@ -36,8 +42,12 @@
 
   $('#sign_off').html('Opps, goodbye!');
 
-  $('#title').on('click', function() {
-    $('#title').hide(500).show(500);
+  $('#first_entry').on('click', function() {
+    $('#first_entry').fadeTo('slow', 0.1);
+  });
+
+  $('.part2').on('click', function() {
+    $(this).fadeTo('slow', 0.1);
   });
 
   var addition = "DONE!"
