@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Hello World</title>
+</head>
+<body>
+  <h1 id="title">Hello (Dev) World</h1>
+
+  <div class="part1">
+    <h2 id="first_entry">Getting Excited</h2>
+    <p>We go onsite in less than a week! Nervous, but mainly excited  to see what's in store.</p>
+  </div>
+
+  <div class="part2">
+    <h2 id="second_entry">So Close...</h2>
+    <p>Coming back to HTML and CSS is freaking me out a little...  it's been so long since we've worked with this!</p>
+    <p>But I did forget how much fun it was :)</p>
+  </div>
+
+  <h3>Going onsite todo list</h3>
+  <ul id="todo_list">
+    <li id="num1" class="list-item">complete email surveys</li>
+    <li id="num2" class="list-item">get items needed together for first day</li>
+    <li id="num3" class="list-item">prep food (very important)</li>
+    <li id="num4" class="list-item">figure out how to get there</li>
+  </ul>
+
+  <h4 id="link">Get more info on <a href="http://devbootcamp.com" target="_blank">DevBootcamp</a></h4>
+
+  <h5 id="sign_off">Thanks for visiting!</h5>
+
+
+
+<script type="jquery/script.js"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+<script>
+ $(function() {
+
+  $('#link').fadeToggle(1000).fadeToggle(1000).fadeToggle(1000).fadeToggle(1000);
+
+  $('#sign_off').html('Opps, goodbye!');
+
+  $('#first_entry').on('click', function() {
+    $('#first_entry').fadeTo('slow', 0.1);
+  });
+
+  $('.part2').on('click', function() {
+    $(this).fadeTo('slow', 0.1);
+  });
+
+  var addition = "DONE!"
+
+  $('.list-item').hover(function() {
+    $(this).fadeToggle(600);
+    $(this).html(addition);
+  });
+
+ });
+
+</script>
+
+
+</body>
+</html>
