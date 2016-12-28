@@ -14,6 +14,7 @@ end
 
 # write a GET route with
 # route parameters
+#localhost:9393/about/Jen
 get '/about/:person' do
   person = params[:person]
   "#{person} is a programmer, and #{person} is learning Sinatra."
@@ -47,9 +48,11 @@ end
 
 
 # RELEASE 0
-get '/:contact' do
-  address = prams[:contact]
-  ""
+
+# URL => localhost:9393/contact/123_Main_St
+get '/contact/:info' do
+  info = params[:info]
+  "This users contact information is #{info}"
 end
 
 
