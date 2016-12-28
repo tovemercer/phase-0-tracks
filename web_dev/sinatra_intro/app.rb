@@ -8,9 +8,9 @@ db.results_as_hash = true
 # write a basic GET route
 # add a query parameter
 # GET /
-get '/' do
-  "#{params[:name]} is #{params[:age]} years old."
-end
+#get '/' do
+#  "#{params[:name]} is #{params[:age]} years old."
+#end
 
 # write a GET route with
 # route parameters
@@ -49,11 +49,53 @@ end
 
 # RELEASE 0
 
-# URL => localhost:9393/contact/123_Main_St
+# 1
+# URL => http://localhost:9393/contact/123_Main_St
 get '/contact/:info' do
   info = params[:info]
   "This users contact information is #{info}"
 end
 
+# 2
+# URL => http://localhost:9393/great_job/?name=Tove
+# URL => http://localhost:9393/great_job/
+get '/great_job/' do
+  name = params[:name]
+  if name
+    "Good job, #{name}!"
+  else
+    "Good job!"
+  end
+end
+
+# 3
+# URL => http://localhost:9393/1/+/2
+get '/:num1/+/:num2' do
+  x = params[:num1].to_i
+  y = params[:num2].to_i
+  answer =  x + y
+  "#{x} + #{y} = #{answer}"
+end
+
+#### 4 (Bonus)
+#### URL => 
+###get '/students/:name' do
+###  name = db.execute("SELECT * FROM students WHERE name =?", [params[:name]])
+###  n = name.to_s
+###  "Name: #{students['n']}"
+###end
+
+# RELEASE 1
+=begin
+1. Is Sinatra the only web app library in Ruby? What are some others?
+it is not; other web app frameworks for ruby are: ruby on rails, merb, nitro, camping
+
+2. Are SQLite and the sqlite3 gem your only options for using a database with Sinatra? What are some others?
+nope. heroku, datamapper, activerecord are just a few other database options.
+
+3. What is meant by the term web stack?
+web stack is the collection of software required for web development.
+contains an operating system, programming language, database software and web server.
+=end
 
 
