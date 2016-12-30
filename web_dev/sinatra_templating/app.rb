@@ -25,3 +25,15 @@ post '/students' do
 end
 
 # add static resources
+
+# RELEASE 0 & 1
+
+get '/students/remove' do
+  erb :remove_student
+end
+
+# we are trying to get this to delete the student but it added students instead
+post '/students' do
+  db.execute("DELETE FROM students WHERE name=(?)", params['name'])
+  redirect '/'
+end
